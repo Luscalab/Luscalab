@@ -14,3 +14,6 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+git add .  # Adiciona todos os arquivos
+git commit -m "Primeiro commit: adiciona README e estrutura inicial"
+git push origin main  # Envia as alterações para o GitHub
