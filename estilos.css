@@ -75,7 +75,7 @@ a:hover {
   color: black; /* Texto visível ao passar o mouse */
 }
 
-/* Estilo para o texto com efeito de falha */
+/* Estilo para o texto com efeito de falha estático */
 .glitch-text {
   font-family: 'Helvetica', Arial, sans-serif; /* Fonte Helvetica */
   font-size: 3rem; /* Tamanho do texto */
@@ -84,10 +84,9 @@ a:hover {
   color: white;
   position: relative;
   text-shadow: 2px 2px 0 #ff0000, -2px -2px 0 #0000ff; /* Efeito de sombra colorida */
-  animation: glitch 1s infinite;
 }
 
-/* Camadas para o efeito de falha */
+/* Camadas para o efeito de falha estático */
 .glitch-text::before,
 .glitch-text::after {
   content: "DÊ VIDA À SUA ARTE"; /* Texto duplicado */
@@ -98,18 +97,16 @@ a:hover {
   height: 100%;
   background: transparent;
   color: white;
-  overflow: hidden;
-  clip-path: inset(0 0 50% 0); /* Corta parte do texto */
 }
 
 .glitch-text::before {
   text-shadow: 2px 2px 0 #ff0000; /* Sombra vermelha */
-  animation: glitch-before 1s infinite;
+  transform: translate(-2px, -2px); /* Deslocamento estático */
 }
 
 .glitch-text::after {
   text-shadow: -2px -2px 0 #0000ff; /* Sombra azul */
-  animation: glitch-after 1s infinite;
+  transform: translate(2px, 2px); /* Deslocamento estático */
 }
 
 /* Animações para o efeito de falha */
