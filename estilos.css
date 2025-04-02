@@ -14,9 +14,9 @@ body {
   height: 100vh; /* Altura da tela inteira */
   display: flex;
   flex-direction: column; /* Alinha o texto e o botão verticalmente */
-  justify-content: flex-start; /* Alinha verticalmente ao topo */
-  align-items: flex-start; /* Alinha horizontalmente à esquerda */
-  text-align: left; /* Texto alinhado à esquerda */
+  justify-content: center; /* Centraliza verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+  text-align: center; /* Centraliza o texto */
   padding: 2rem; /* Espaçamento interno para afastar do canto */
   overflow: hidden; /* Garante que a imagem não ultrapasse os limites */
 }
@@ -73,6 +73,7 @@ a:hover {
   padding: 0.8rem 1.5rem;
   font-size: 1rem;
   font-weight: bold;
+  text-transform: uppercase; /* Texto em maiúsculo */
   color: transparent; /* Texto do botão transparente */
   background-color: white; /* Fundo do botão branco */
   border: 2px solid white; /* Borda branca para contraste */
@@ -85,6 +86,15 @@ a:hover {
 .btn:hover {
   background-color: #f4f4f4; /* Fundo cinza claro ao passar o mouse */
   color: black; /* Texto visível ao passar o mouse */
+}
+
+/* Estilo específico para o botão na primeira seção */
+#section1 .btn {
+  color: rgba(255, 255, 255, 0.5); /* Texto transparente visível */
+}
+
+#section1 .btn:hover {
+  color: white; /* Texto totalmente visível ao passar o mouse */
 }
 
 /* Estilo para o texto com efeito de falha estático */
