@@ -21,6 +21,18 @@ body {
   overflow: hidden; /* Garante que a imagem não ultrapasse os limites */
 }
 
+.hero-section#section1 {
+  background-image: url('fundo1.png'); /* Substitua pelo caminho correto */
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-section#section2 {
+  background-image: url('fundo2.png'); /* Substitua pelo caminho correto */
+  background-size: cover;
+  background-position: center;
+}
+
 .hero-image {
   position: absolute;
   width: 100%;
@@ -177,5 +189,10 @@ a:hover {
 @media (max-width: 768px) {
   .hero-section h1 {
     font-size: 2rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
   }
 }
