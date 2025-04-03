@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LuscaLab: Transforme suas ideias em arte digital. Soluções personalizadas para dar vida aos seus projetos criativos.">
+  <meta name="theme-color" content="#498c69">
+  <title>LuscaLab | Dê VIDA À SUA ARTE</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <script src="auth.js" defer></script>
+</head>
+
+<body>
+  <!-- Cabeçalho -->
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">LuscaLab</h1>
+      <nav class="nav">
+        <ul>
+          <li><a href="#section1">Início</a></li>
+          <li><a href="#section2">Serviços</a></li>
+          <li><a href="#section3">Contato</a></li>
+          <li><a href="#section4">Loja</a></li>
+          <li><a href="#" id="githubLogin" class="login-btn">
+            <img src="github-mark.svg" alt="GitHub" class="github-icon">
+            Login com GitHub
+          </a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main role="main">
+    <!-- Seção Hero -->
+    <section id="section1" class="hero-section">
+      <div class="hero-content">
+        <div class="hero-text-container">
+          <h1 class="hero-title">DÊ VIDA À SUA ARTE</h1>
+          <p class="hero-description">Onde a imaginação se transforma em realidade digital</p>
+          <a href="#section2" class="btn">Saiba mais</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Serviços -->
+    <section id="section2" class="services-section">
+      <div class="container">
+        <h2 class="section-title">Nossos Serviços</h2>
+        <p class="section-description">
+          Conheça as soluções exclusivas que oferecemos para transformar suas ideias em realidade
+        </p>
+        <div class="services-grid">
+          <article class="service-card">
+            <h3>Design Digital</h3>
+            <p>Criações únicas e personalizadas para sua marca</p>
+          </article>
+          <article class="service-card">
+            <h3>Arte Digital</h3>
+            <p>Transforme suas ideias em arte digital única</p>
+          </article>
+          <article class="service-card">
+            <h3>Animação</h3>
+            <p>Dê movimento e vida às suas criações</p>
+          </article>
+        </div>
+        <a href="#section3" class="btn btn-secondary" aria-label="Entre em contato conosco">
+          Entre em contato
+        </a>
+      </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="section3" class="contact-section">
+      <div class="container">
+        <h2 class="section-title">Fale Conosco</h2>
+        <form class="contact-form" action="#" method="POST" aria-label="Formulário de contato">
+          <div class="form-group">
+            <label for="name" class="visually-hidden">Nome</label>
+            <input type="text" id="name" name="name" placeholder="Seu Nome" required 
+                   aria-required="true">
+          </div>
+          
+          <div class="form-group">
+            <label for="email" class="visually-hidden">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="Seu E-mail" required 
+                   aria-required="true">
+          </div>
+          
+          <div class="form-group">
+            <label for="message" class="visually-hidden">Mensagem</label>
+            <textarea id="message" name="message" placeholder="Sua Mensagem" required 
+                      aria-required="true" rows="5"></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn-primary" aria-label="Enviar mensagem">
+            Enviar
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <p class="copyright">&copy; 2025 LuscaLab. Todos os direitos reservados.</p>
+        <nav class="footer-nav" aria-label="Links do rodapé">
+          <ul>
+            <li><a href="#" aria-label="Política de Privacidade">Privacidade</a></li>
+            <li><a href="#" aria-label="Termos de Uso">Termos</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,3 +1,6 @@
+<!-- filepath: c:\Users\Ruan&Luan\meu_site\index.html -->
+<script src="auth.js" defer></script>
+
 const clientId = 'Ov23liQxQxjHjqn4D8ee'; // Replace with your actual Client ID
 const redirectUri = 'https://luscalab.github.io/luscalab/callback.html';
 
