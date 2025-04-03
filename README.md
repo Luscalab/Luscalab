@@ -33,11 +33,11 @@ luscalab/
 1. Acesse [GitHub Developer Settings](https://github.com/settings/developers)
 2. Crie um novo OAuth App:
    - Application name: LuscaLab
-   - Homepage URL: https://[seu-usuario].github.io/luscalab
-   - Callback URL: https://[seu-usuario].github.io/luscalab/callback.html
+   - Homepage URL: https://luscalab.github.io/luscalab
+   - Callback URL: https://luscalab.github.io/luscalab/callback.html
 
 ## 📌 Como Usar
-1. Acesse o site: https://[seu-usuario].github.io/luscalab
+1. Acesse o site: https://luscalab.github.io/luscalab
 2. Faça login com sua conta GitHub
 3. Acesse sua área personalizada
 4. Gerencie seus projetos e pedidos
@@ -52,4 +52,4 @@ luscalab/
 Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ## 📬 Contato
-Para mais informações ou dúvidas, entre em contato através do email: [seu-email@exemplo.com]
+Para mais informações ou dúvidas, entre em contato através do email: [luscalaboratorio@gmail.com]
