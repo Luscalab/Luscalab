@@ -1,30 +1,51 @@
+const clientId = 'Ov23liQxQxjHjqn4D8ee';
+const redirectUri = 'https://luscalab.github.io/luscalab/callback.html';
+
+document.addEventListener('DOMContentLoaded', () => {
+    const loginButton = document.getElementById('githubLogin');
+    if (loginButton) {
+        loginButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            console.log('Botão de login clicado');
+            const scope = 'user';
+            window.location.href = `https://github.com/login/oauth/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scope}`;
+        });
+    }
+});
+
 // Fetch user data from GitHub
 async function getUserData() {
-    const token = localStorage.getItem('github_token');
-    if (!token) {
-        window.location.href = 'index.html';
+    const code = localStorage.getItem('github_code');
+    if (!code) {
+        window.location.href = '/luscalab/index.html';
         return;
     }
 
     try {
         const response = await fetch('https://api.github.com/user', {
             headers: {
-                'Authorization': `token ${token}`
+                'Accept': 'application/json',
+                'Authorization': `Bearer ${code}`
             }
         });
-        const userData = await response.json();
         
+        if (!response.ok) {
+            throw new Error('API request failed');
+        }
+        
+        const userData = await response.json();
         document.getElementById('userAvatar').src = userData.avatar_url;
         document.getElementById('userName').textContent = userData.name || userData.login;
     } catch (error) {
         console.error('Error fetching user data:', error);
+        window.location.href = '/luscalab/index.html';
     }
 }
 
 document.getElementById('logout').addEventListener('click', (e) => {
     e.preventDefault();
-    localStorage.removeItem('github_token');
-    window.location.href = 'index.html';
+    localStorage.removeItem('github_code');
+    window.location.href = '/luscalab/index.html';
 });
 
 getUserData();

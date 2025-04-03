@@ -15,10 +15,10 @@
         if (code) {
             console.log('Authorization code:', code);
             localStorage.setItem('github_code', code);
-            window.location.href = '/luscalab/dashboard.html'; // Fix: Add /luscalab prefix
+            window.location.href = '/luscalab/dashboard.html';
         } else {
             console.error('Authorization code not found.');
-            window.location.href = '/luscalab/index.html'; // Fix: Add /luscalab prefix
+            window.location.href = '/luscalab/index.html';
         }
     </script>
 </body>

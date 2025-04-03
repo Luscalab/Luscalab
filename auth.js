@@ -6,8 +6,6 @@ const redirectUri = 'https://luscalab.github.io/luscalab/callback.html';
 
 // Wait for DOM to load
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOM loaded, initializing auth...');
-    
     const loginButton = document.getElementById('githubLogin');
     
     if (loginButton) {
