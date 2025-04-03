@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - LuscaLab</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">LuscaLab</h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="#projetos">Meus Projetos</a></li>
+                    <li><a href="#pedidos">Pedidos</a></li>
+                    <li><a href="#" id="logout">Sair</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="dashboard">
+        <div class="container">
+            <div class="user-profile">
+                <img id="userAvatar" alt="Avatar" class="avatar">
+                <h2 id="userName">Carregando...</h2>
+            </div>
+            
+            <section id="projetos" class="dashboard-section">
+                <h2>Meus Projetos</h2>
+                <div class="projects-grid">
+                    <!-- Projects will be loaded dynamically -->
+                </div>
+            </section>
+
+            <section id="pedidos" class="dashboard-section">
+                <h2>Meus Pedidos</h2>
+                <div class="orders-list">
+                    <!-- Orders will be loaded dynamically -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
