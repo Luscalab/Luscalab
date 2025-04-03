@@ -13,39 +13,62 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Fetch user data from GitHub
-async function getUserData() {
-    const code = localStorage.getItem('github_code');
-    if (!code) {
-        window.location.href = '/luscalab/index.html';
-        return;
+class Dashboard {
+    constructor() {
+        this.orders = [];
+        this.userData = null;
     }
 
-    try {
-        const response = await fetch('https://api.github.com/user', {
-            headers: {
-                'Accept': 'application/json',
-                'Authorization': `Bearer ${code}`
-            }
-        });
-        
-        if (!response.ok) {
-            throw new Error('API request failed');
+    async init() {
+        await this.loadUserData();
+        this.setupEventListeners();
+        this.loadOrders();
+    }
+
+    async loadUserData() {
+        const code = localStorage.getItem('github_code');
+        if (!code) {
+            window.location.href = '/luscalab/index.html';
+            return;
         }
-        
-        const userData = await response.json();
-        document.getElementById('userAvatar').src = userData.avatar_url;
-        document.getElementById('userName').textContent = userData.name || userData.login;
-    } catch (error) {
-        console.error('Error fetching user data:', error);
-        window.location.href = '/luscalab/index.html';
+
+        try {
+            const response = await fetch('https://api.github.com/user', {
+                headers: {
+                    'Accept': 'application/json',
+                    'Authorization': `Bearer ${code}`
+                }
+            });
+            
+            if (!response.ok) throw new Error('Failed to load user data');
+            
+            this.userData = await response.json();
+            this.updateProfile();
+        } catch (error) {
+            console.error('Error:', error);
+            window.location.href = '/luscalab/index.html';
+        }
+    }
+
+    updateProfile() {
+        document.getElementById('userAvatar').src = this.userData.avatar_url;
+        document.getElementById('userName').textContent = this.userData.name || this.userData.login;
+    }
+
+    setupEventListeners() {
+        document.getElementById('logout').addEventListener('click', (e) => {
+            e.preventDefault();
+            localStorage.removeItem('github_code');
+            window.location.href = '/luscalab/index.html';
+        });
+    }
+
+    loadOrders() {
+        // Placeholder for loading orders
+        // This will be implemented when we add the order system
     }
 }
 
-document.getElementById('logout').addEventListener('click', (e) => {
-    e.preventDefault();
-    localStorage.removeItem('github_code');
-    window.location.href = '/luscalab/index.html';
-});
-
-getUserData();
+// Initialize dashboard
+const dashboard = new Dashboard();
+document.addEventListener('DOMContentLoaded', () => dashboard.init());

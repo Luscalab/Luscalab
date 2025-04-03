@@ -303,17 +303,21 @@ body {
 /* Login Button Style - remove duplicate and keep only this one */
 .login-btn {
     display: inline-block;
-    padding: 0.5rem 1rem;
+    padding: 0.8rem 1.5rem;
     background-color: #498c69;
     color: white;
     border-radius: 4px;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.9rem;
 }
 
 .login-btn:hover {
     background-color: #3a7052;
-    cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(73, 140, 105, 0.2);
 }
 
 /* Media Queries - consolidated */
@@ -328,6 +332,11 @@ body {
 
   .header .nav ul {
     gap: 1rem;
+    padding: 0.5rem;
+  }
+
+  .header .nav ul li {
+    margin: 0.5rem 0;
   }
 
   .header .nav ul li a {
@@ -369,6 +378,13 @@ body {
   .dashboard-section {
     padding: 1.5rem;
   }
+
+  .login-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+    width: 100%;
+    text-align: center;
+  }
 }
 
 @media (max-width: 480px) {
@@ -392,5 +408,24 @@ body {
   .hero-title {
     font-size: 2.5rem;
     margin-bottom: 0.6rem;
+  }
+
+  .header .nav {
+    width: 100%;
+  }
+
+  .header .nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header .nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .login-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
   }
 }

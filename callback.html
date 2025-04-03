@@ -11,15 +11,26 @@
         <p>Autenticando...</p>
     </div>
     <script>
-        const code = new URLSearchParams(window.location.search).get('code');
-        if (code) {
-            console.log('Authorization code:', code);
-            localStorage.setItem('github_code', code);
-            window.location.href = '/luscalab/dashboard.html';
-        } else {
-            console.error('Authorization code not found.');
-            window.location.href = '/luscalab/index.html';
+        class AuthCallback {
+            constructor() {
+                this.code = new URLSearchParams(window.location.search).get('code');
+            }
+
+            handle() {
+                if (this.code) {
+                    console.log('Authorization code:', this.code);
+                    localStorage.setItem('github_code', this.code);
+                    window.location.href = '/luscalab/dashboard.html';
+                } else {
+                    console.error('Authorization code not found.');
+                    window.location.href = '/luscalab/index.html';
+                }
+            }
         }
+
+        // Handle the callback
+        const callback = new AuthCallback();
+        callback.handle();
     </script>
 </body>
 </html>
