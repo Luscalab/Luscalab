@@ -8,7 +8,6 @@
   <title>LuscaLab | Dê VIDA À SUA ARTE</title>
   <link rel="stylesheet" href="estilos.css">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <script src="auth.js" defer></script>
 </head>
 
 <body>
@@ -112,6 +111,6 @@
       </div>
     </div>
   </footer>
-  <script src="auth.js" defer></script>
+  <script src="auth.js"></script>
 </body>
 </html>

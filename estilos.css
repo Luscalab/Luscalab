@@ -300,18 +300,20 @@ body {
   background: rgba(220, 53, 69, 0.1);
 }
 
-/* Add these styles for the login button */
+/* Login Button Style - remove duplicate and keep only this one */
 .login-btn {
-    background: #498c69;
-    color: white;
+    display: inline-block;
     padding: 0.5rem 1rem;
+    background-color: #498c69;
+    color: white;
     border-radius: 4px;
     text-decoration: none;
-    transition: background 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 .login-btn:hover {
-    background: #3a7052;
+    background-color: #3a7052;
+    cursor: pointer;
 }
 
 /* Media Queries - consolidated */
