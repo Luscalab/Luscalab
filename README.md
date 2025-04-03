@@ -49,7 +49,7 @@ luscalab/
 - [ ] Chat em tempo real
 
 ## 📄 Licença
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+Este projeto está sob a licença MIT.
 
 ## 📬 Contato
-Para mais informações ou dúvidas, entre em contato através do email: [luscalaboratorio@gmail.com]
+Para mais informações ou dúvidas, entre em contato através do email: luscalaboratorio@gmail.com
