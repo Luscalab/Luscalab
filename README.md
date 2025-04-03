@@ -8,22 +8,19 @@ Site profissional focado em design e arte digital, com sistema de autenticação
 ## 📁 Estrutura do Projeto
 ```
 luscalab/
-├── index.html      # Página principal
-├── estilos.css     # Estilos CSS
-├── js/
-│   └── auth.js     # Sistema de autenticação
-└── images/
-    └── github-mark.svg
+├── index.html        # Página principal
+├── dashboard.html    # Área do cliente
+├── callback.html     # Página de callback OAuth
+├── auth.js          # Sistema de autenticação
+├── dashboard.js     # Funcionalidades do dashboard
+└── estilos.css      # Estilos CSS
 ```
 
-C:\Users\Ruan&Luan\meu_site\
-├── js\
-└── images\
-
 ## ✨ Funcionalidades
-- Design responsivo
-- Integração com GitHub OAuth
+- Design responsivo e moderno
+- Autenticação via GitHub OAuth
 - Área do cliente personalizada
+- Dashboard de usuário
 - Portfolio de serviços
 - Formulário de contato
 
@@ -31,29 +28,36 @@ C:\Users\Ruan&Luan\meu_site\
 - HTML5
 - CSS3
 - JavaScript
-- GitHub OAuth
+- GitHub OAuth API
+- GitHub Pages
 
 ## 🔧 Configuração do OAuth
 1. Acesse [GitHub Developer Settings](https://github.com/settings/developers)
-2. Crie um novo OAuth App:
+2. Crie um novo OAuth App com as seguintes configurações:
    - Application name: LuscaLab
-   - Homepage URL: https://[seu-usuario].github.io/luscalab
-   - Callback URL: https://[seu-usuario].github.io/luscalab/callback.html
+   - Homepage URL: https://luscalab.github.io/luscalab
+   - Authorization callback URL: https://luscalab.github.io/luscalab/callback.html
 
 ## 📌 Como Usar
-1. Acesse o site: https://[seu-usuario].github.io/luscalab
-2. Faça login com sua conta GitHub
-3. Acesse sua área personalizada
-4. Gerencie seus projetos e pedidos
+1. Acesse: https://luscalab.github.io/luscalab
+2. Clique em "Login com GitHub"
+3. Autorize o acesso à sua conta GitHub
+4. Acesse sua área personalizada no dashboard
 
 ## 🎯 Próximas Atualizações
-- [ ] Dashboard do cliente
-- [ ] Sistema de pedidos
-- [ ] Galeria de projetos
+- [ ] Sistema de pedidos integrado
+- [ ] Galeria de projetos interativa
 - [ ] Chat em tempo real
+- [ ] Área administrativa
+- [ ] Sistema de notificações
 
 ## 📄 Licença
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+Este projeto está sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ## 📬 Contato
-Para mais informações ou dúvidas, entre em contato através do email: [seu-email@exemplo.com]
+- Website: [luscalab.github.io/luscalab](https://luscalab.github.io/luscalab)
+- GitHub: [@luscalab](https://github.com/luscalab)
+- Email: [seu-email@exemplo.com]
+
+## 🤝 Contribuição
+Contribuições são sempre bem-vindas! Por favor, leia o [CONTRIBUTING.md](CONTRIBUTING.md) primeiro.
