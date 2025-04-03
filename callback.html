@@ -11,45 +11,15 @@
         <p>Autenticando...</p>
     </div>
     <script>
-        class AuthCallback {
-            constructor() {
-                this.code = new URLSearchParams(window.location.search).get('code');
-                this.handleCallback();
-            }
-
-            async handleCallback() {
-                if (this.code) {
-                    try {
-                        const response = await fetch('https://seu-backend.com/oauth/token', {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify({ code: this.code, clientId: 'Ov23liQxQxjHjqn4D8ee', redirectUri: 'https://luscalab.github.io/luscalab/callback.html' })
-                        });
-
-                        if (!response.ok) throw new Error('Erro ao trocar código por token');
-                        const data = await response.json();
-                        localStorage.setItem('github_token', data.access_token);
-                        this.redirectToDashboard();
-                    } catch (error) {
-                        console.error('Erro na autenticação:', error);
-                        this.redirectToHome();
-                    }
-                } else {
-                    console.error('Nenhum código recebido');
-                    this.redirectToHome();
-                }
-            }
-
-            redirectToDashboard() {
-                window.location.href = '/luscalab/dashboard.html';
-            }
-
-            redirectToHome() {
-                window.location.href = '/luscalab/index.html';
-            }
+        const code = new URLSearchParams(window.location.search).get('code');
+        if (code) {
+            console.log('Code received:', code);
+            localStorage.setItem('github_token', code);
+            window.location.href = '/luscalab/dashboard.html';
+        } else {
+            console.error('No code received');
+            window.location.href = '/luscalab/index.html';
         }
-
-        new AuthCallback();
     </script>
 </body>
 </html>
