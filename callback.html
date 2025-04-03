@@ -14,9 +14,11 @@
         const code = new URLSearchParams(window.location.search).get('code');
         if (code) {
             console.log('Authorization code:', code);
-            window.location.href = '/luscalab/dashboard.html'; // Updated path
+            localStorage.setItem('github_code', code);
+            window.location.href = 'dashboard.html';
         } else {
             console.error('Authorization code not found.');
+            window.location.href = 'index.html';
         }
     </script>
 </body>
