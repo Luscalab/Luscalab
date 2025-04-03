@@ -1,0 +1,21 @@
+// filepath: callback.html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autenticação - LuscaLab</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="loading">
+        <p>Autenticando...</p>
+    </div>
+    <script>
+        const code = new URLSearchParams(window.location.search).get('code');
+        if (code) {
+            window.location.href = '/dashboard.html';
+        }
+    </script>
+</body>
+</html>
