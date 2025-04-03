@@ -37,6 +37,7 @@ luscalab/
    - Application name: LuscaLab
    - Homepage URL: https://luscalab.github.io/luscalab
    - Authorization callback URL: https://luscalab.github.io/luscalab/callback.html
+3. Configure um backend para trocar o código OAuth por um token de acesso. Consulte a documentação da API do GitHub para mais detalhes.
 
 ## 📌 Como Usar
 1. Acesse: https://luscalab.github.io/luscalab

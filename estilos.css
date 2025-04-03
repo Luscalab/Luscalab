@@ -233,12 +233,16 @@ body {
   margin-top: 2rem;
 }
 
-/* Loading Screen */
+/* Auth related styles */
 .loading {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  background: #f8f9fa;
+}
+
+.loading p {
   font-size: 1.2rem;
   color: #498c69;
 }
@@ -302,22 +306,20 @@ body {
 
 /* Login Button Style - remove duplicate and keep only this one */
 .login-btn {
-    display: inline-block;
-    padding: 0.8rem 1.5rem;
-    background-color: #498c69;
-    color: white;
-    border-radius: 4px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    font-weight: 500;
-    text-transform: uppercase;
-    font-size: 0.9rem;
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: #498c69;
+  color: white !important;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  text-align: center;
 }
 
 .login-btn:hover {
-    background-color: #3a7052;
-    transform: translateY(-2px);
-    box-shadow: 0 2px 8px rgba(73, 140, 105, 0.2);
+  background-color: #3a7052;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(73, 140, 105, 0.2);
 }
 
 /* Media Queries - consolidated */

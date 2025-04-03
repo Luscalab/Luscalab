@@ -14,23 +14,42 @@
         class AuthCallback {
             constructor() {
                 this.code = new URLSearchParams(window.location.search).get('code');
+                this.handleCallback();
             }
 
-            handle() {
+            async handleCallback() {
                 if (this.code) {
-                    console.log('Authorization code:', this.code);
-                    localStorage.setItem('github_code', this.code);
-                    window.location.href = '/luscalab/dashboard.html';
+                    try {
+                        const response = await fetch('https://seu-backend.com/oauth/token', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ code: this.code, clientId: 'Ov23liQxQxjHjqn4D8ee', redirectUri: 'https://luscalab.github.io/luscalab/callback.html' })
+                        });
+
+                        if (!response.ok) throw new Error('Erro ao trocar código por token');
+                        const data = await response.json();
+                        localStorage.setItem('github_token', data.access_token);
+                        this.redirectToDashboard();
+                    } catch (error) {
+                        console.error('Erro na autenticação:', error);
+                        this.redirectToHome();
+                    }
                 } else {
-                    console.error('Authorization code not found.');
-                    window.location.href = '/luscalab/index.html';
+                    console.error('Nenhum código recebido');
+                    this.redirectToHome();
                 }
+            }
+
+            redirectToDashboard() {
+                window.location.href = '/luscalab/dashboard.html';
+            }
+
+            redirectToHome() {
+                window.location.href = '/luscalab/index.html';
             }
         }
 
-        // Handle the callback
-        const callback = new AuthCallback();
-        callback.handle();
+        new AuthCallback();
     </script>
 </body>
 </html>

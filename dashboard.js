@@ -15,19 +15,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 class Dashboard {
     constructor() {
-        this.orders = [];
         this.userData = null;
     }
 
     async init() {
         await this.loadUserData();
-        this.setupEventListeners();
-        this.loadOrders();
+        this.setupLogout();
     }
 
     async loadUserData() {
-        const code = localStorage.getItem('github_code');
-        if (!code) {
+        const token = localStorage.getItem('github_token');
+        if (!token) {
             window.location.href = '/luscalab/index.html';
             return;
         }
@@ -36,11 +34,13 @@ class Dashboard {
             const response = await fetch('https://api.github.com/user', {
                 headers: {
                     'Accept': 'application/json',
-                    'Authorization': `Bearer ${code}`
+                    'Authorization': `Bearer ${token}`
                 }
             });
             
-            if (!response.ok) throw new Error('Failed to load user data');
+            if (!response.ok) {
+                throw new Error('Failed to load user data');
+            }
             
             this.userData = await response.json();
             this.updateProfile();
@@ -51,24 +51,26 @@ class Dashboard {
     }
 
     updateProfile() {
-        document.getElementById('userAvatar').src = this.userData.avatar_url;
-        document.getElementById('userName').textContent = this.userData.name || this.userData.login;
+        const avatar = document.getElementById('userAvatar');
+        const name = document.getElementById('userName');
+        
+        if (this.userData) {
+            avatar.src = this.userData.avatar_url;
+            name.textContent = this.userData.name || this.userData.login;
+        }
     }
 
-    setupEventListeners() {
+    setupLogout() {
         document.getElementById('logout').addEventListener('click', (e) => {
             e.preventDefault();
             localStorage.removeItem('github_code');
             window.location.href = '/luscalab/index.html';
         });
     }
-
-    loadOrders() {
-        // Placeholder for loading orders
-        // This will be implemented when we add the order system
-    }
 }
 
 // Initialize dashboard
-const dashboard = new Dashboard();
-document.addEventListener('DOMContentLoaded', () => dashboard.init());
+document.addEventListener('DOMContentLoaded', () => {
+    const dashboard = new Dashboard();
+    dashboard.init();
+});
