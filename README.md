@@ -57,7 +57,7 @@ Este projeto está sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE) par
 ## 📬 Contato
 - Website: [luscalab.github.io/luscalab](https://luscalab.github.io/luscalab)
 - GitHub: [@luscalab](https://github.com/luscalab)
-- Email: [seu-email@exemplo.com]
+- Email: luscalaboratorio@gmail.com]
 
 ## 🤝 Contribuição
 Contribuições são sempre bem-vindas! Por favor, leia o [CONTRIBUTING.md](CONTRIBUTING.md) primeiro.
