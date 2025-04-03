@@ -1,4 +1,3 @@
-// filepath: callback.html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -14,7 +13,11 @@
     <script>
         const code = new URLSearchParams(window.location.search).get('code');
         if (code) {
+            // Placeholder for exchanging the code for an access token
+            console.log('Authorization code:', code);
             window.location.href = '/dashboard.html';
+        } else {
+            console.error('Authorization code not found.');
         }
     </script>
 </body>
