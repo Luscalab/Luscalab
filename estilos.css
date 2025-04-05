@@ -3,110 +3,114 @@
 
 /* Reset default styles */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  border: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Poppins', Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #f4f4f4;
-  overflow-x: hidden;
+    font-family: 'Poppins', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
 }
 
 /* Container principal - removido padding */
 .container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* Floating Navigation */
 .nav-floating {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  padding: 20px 0;
-  transition: all 0.3s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 0;
+    transition: all 0.3s ease;
+    background: transparent; /* Fundo completamente transparente */
+    backdrop-filter: none; /* Remove o efeito de desfoque */
+    box-shadow: none; /* Remove a sombra */
 }
 
 .nav-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
-  color: #fff;
-  font-size: 2rem;
-  font-weight: 700;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 
 .nav-links {
-  display: flex;
-  list-style: none;
-  gap: 2rem;
-  align-items: center;
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
 }
 
 .nav-links a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-  transition: all 0.3s ease;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #498c69;
+    color: #498c69;
 }
 
 /* Login Button */
 .login-btn {
-  background: rgba(73, 140, 105, 0.9);
-  padding: 0.8rem 1.5rem;
-  border-radius: 4px;
-  transition: all 0.3s ease;
+    background: rgba(73, 140, 105, 0.9);
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
 }
 
 .login-btn:hover {
-  background: #498c69;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    background: #498c69;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 /* Scrolled State */
 .nav-floating.scrolled {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background: transparent; /* Mantém o fundo transparente mesmo ao rolar */
+    box-shadow: none; /* Remove a sombra ao rolar */
 }
 
 .nav-floating.scrolled .logo,
 .nav-floating.scrolled .nav-links a:not(.login-btn) {
-  color: #333;
-  text-shadow: none;
+    color: #333;
+    text-shadow: none;
 }
 
 /* Hero Section - Ensure it starts at the top */
 .hero-section {
-  min-height: 100vh;
-  padding-top: 80px;
-  background: linear-gradient(135deg, #1a1a1a, #333);
-  /* Add your background image if needed */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('fundo1.png') no-repeat center center/cover;
+    padding-top: 80px; /* Add padding to avoid content overlap */
 }
 
 /* Header styles */
@@ -537,4 +541,19 @@ body {
     padding: 0.5rem 1rem;
     font-size: 0.8rem;
   }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 0 15px;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .login-btn {
+        padding: 0.6rem 1rem;
+    }
 }
