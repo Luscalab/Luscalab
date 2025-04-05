@@ -49,11 +49,10 @@ body {
 }
 
 .logo {
-    color: #333;
+    color: #ffffff;
     font-size: 2rem;
     font-weight: 700;
-    text-shadow: none;
-}
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra sutil */
 
 .nav-links {
     display: flex;
@@ -63,10 +62,11 @@ body {
 }
 
 .nav-links a {
-    color: #333;
+    color: #ffffff;
     text-decoration: none;
     font-weight: 500;
     transition: all 0.3s ease;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra sutil */
 }
 
 .nav-links a:hover {
@@ -80,8 +80,8 @@ body {
     box-shadow: none; /* Remove a sombra ao rolar */
 }
 
-.nav-floating.scrolled .logo,
-.nav-floating.scrolled .nav-links a:not(.login-btn) {
+.nav-floating.logo,
+.nav-floating.nav-links a:not(.login-btn) {
     color: #333;
     text-shadow: none;
 }
