@@ -160,21 +160,6 @@ body {
 .header .nav ul li a:hover {
   color: #498c69;
 }
-
-/* Special styling for login button */
-.login-btn {
-  background-color: rgba(73, 140, 105, 0.9) !important;
-  padding: 0.8rem 1.5rem !important;
-  border-radius: 4px !important;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.login-btn:hover {
-  background-color: #498c69 !important;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
 /* Hero Section - cleaned up */
 .hero-section {
   min-height: 100vh;
