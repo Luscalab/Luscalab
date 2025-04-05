@@ -36,10 +36,9 @@ body {
     width: 100%;
     z-index: 1000;
     padding: 20px 0;
-    transition: all 0.3s ease;
     background: transparent; /* Fundo completamente transparente */
-    backdrop-filter: none; /* Remove o efeito de desfoque */
     box-shadow: none; /* Remove a sombra */
+    border: none; /* Remove qualquer borda */
 }
 
 .nav-container {
@@ -55,7 +54,7 @@ body {
     color: #fff;
     font-size: 2rem;
     font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Mantém a sombra no texto para visibilidade */
 }
 
 .nav-links {
@@ -69,7 +68,7 @@ body {
     color: #fff;
     text-decoration: none;
     font-weight: 500;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Mantém a sombra no texto para visibilidade */
     transition: all 0.3s ease;
 }
 
@@ -88,7 +87,7 @@ body {
 .login-btn:hover {
     background: #498c69;
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Scrolled State */
